@@ -15,5 +15,3 @@ public class Farmacias {
     @Embedded
     private Endereco endereco;
 }
-
-}

@@ -14,4 +14,3 @@ public class Endereco {
     private Double latitude;
     private Double longitude;
 }
-}
