@@ -1,2 +1,6 @@
-package caetano.maria.medicationmanagement.models;public enum TipoMedicamento {
+package caetano.maria.medicationmanagement.models;
+
+public enum TipoMedicamento {
+    COMUM;
+    CONTROLADO;
 }
