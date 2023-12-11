@@ -1,4 +1,4 @@
-package caetano.maria.medicationmanagement.models;
+package caetano.maria.medicationmanagement.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -17,7 +17,7 @@ public class Endereco {
     private String logradouro;
 
     @Column(nullable = false)
-    private Integer numero;
+    private String numero;
 
     @Column(nullable = false)
     private String bairro;
