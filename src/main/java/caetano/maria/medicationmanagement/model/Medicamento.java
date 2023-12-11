@@ -1,4 +1,4 @@
-package caetano.maria.medicationmanagement.models;
+package caetano.maria.medicationmanagement.model;
 
 import caetano.maria.medicationmanagement.enums.TipoMedicamentoEnum;
 import jakarta.persistence.Column;
