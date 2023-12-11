@@ -35,6 +35,6 @@ public class EstoqueController {
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Object> EstoqueAddMedicamentoDto(@RequestBody @Valid EstoqueAddMedicamentoDto estoqueAddMedicamentoDto) {
-        return ResponseEntity.status((HttpStatus.OK)).body(estoqueService.addMedicamengit add toNoEstoque(estoqueAddMedicamentoDto));
+        return ResponseEntity.status((HttpStatus.OK)).body(estoqueService.addMedicamentoNoEstoque(estoqueAddMedicamentoDto));
     }
 }
