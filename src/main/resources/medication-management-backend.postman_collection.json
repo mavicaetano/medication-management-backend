@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "f7066160-d86b-46b8-902f-e263912b2616",
+		"name": "medication-management-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28465155"
+	},
+	"item": [
+		{
+			"name": "GET ALL MEDICAMENTOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/medicamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE MEDICAMENTO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/medicamentos/8880",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicamentos",
+						"8880"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL FARMÁCIAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/farmacias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farmacias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE FARMÁCIA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/farmacias/43178995000198",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farmacias",
+						"43178995000198"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST MEDICAMENTO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nroRegistro\": 9876,\r\n   \"nome\": \"Medicine\",\r\n   \"laboratorio\": \"Matrix\",\r\n   \"dosagem\": \"2x ao dia\",\r\n   \"descricao\": \"Descricao\",\r\n   \"preco\": 11.0,\r\n   \"tipo\": \"COMUM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST FARMÁCIA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"cnpj\": 3333333333,\r\n   \"razaoSocial\": \"NovaFarm Ltda\",\r\n   \"nomeFantasia\": \"Farmácia NovaFarm\",\r\n   \"email\": \"email10@email.com\",\r\n   \"telefone\": \"(44)4444-444\",\r\n   \"celular\": \"(55)5555-555\",\r\n   \"endereco\": {\r\n       \"cep\": 88090777,\r\n       \"logradouro\": \"Rua Paris\",\r\n       \"numero\": 255,\r\n       \"bairro\": \"Centro\",\r\n       \"cidade\": \"Madagascar\",\r\n       \"estado\": \"SP\",\r\n       \"complemento\": \"Apto 201\",\r\n       \"latitude\": 12,\r\n       \"longitude\": 13\r\n   }\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/farmacias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farmacias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ESTOQUE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estoque/43178995000198",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estoque",
+						"43178995000198"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ESTOQUE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"cnpj\": 90561736000121,\r\n\t\"nroRegistro\": 2233,\r\n\t\"quantidade\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estoque",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estoque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ESTOQUE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"cnpj\": 90561736000121,\r\n\t\"nroRegistro\": 2233,\r\n\t\"quantidade\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estoque/90561736000121",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estoque",
+						"90561736000121"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ESTOQUE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"cnpjOrigem\": 90561736000121,\r\n\t\"cnpjDestino\": 43178995000198,\r\n\t\"nroRegistro\": 1010,\r\n\t\"quantidade\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estoque",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estoque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HEALTH CHECK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST INICIALIZAÇÃO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/inicializacao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inicializacao"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
