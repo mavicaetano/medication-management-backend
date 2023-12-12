@@ -23,7 +23,7 @@ Este projeto é uma API que visa centralizar o gerenciamento de medicamentos e f
 - Baixe e execute o [Postman](https://www.postman.com);
 - Instale o [Postman Collection](https://github.com/mavicaetano/medication-management-backend/blob/feature/readme/src/main/resources/medication-management-backend.postman_collection.json) do projeto;
 
-##### Utilizando os serviços da API
+#### Utilizando os serviços da API
 
 No Postman, você encontrará as seguintes requisições:
 
