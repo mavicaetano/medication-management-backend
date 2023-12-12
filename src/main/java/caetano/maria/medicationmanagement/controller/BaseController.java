@@ -18,7 +18,7 @@ public class BaseController {
         this.baseService = baseService;
     }
 
-    @GetMapping
+    @GetMapping("/health")
     public String healthCheck() {
         return "OK";
     }
