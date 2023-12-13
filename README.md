@@ -101,7 +101,7 @@ Os dados da farmácia e do endereço podem ser substituídos. Todos os campos, e
 ###### 7. GET ESTOQUE
 `http://localhost:8080/estoque/43178995000198`
 
-Após o endpoint padrão (/estoque), coloque o CNPJ da farmácia cujo estoque você quer consultar (/estoque/cnpj-da-farmacia).
+Após o endpoint padrão, coloque o CNPJ da farmácia cujo estoque você quer consultar (/estoque/cnpj-da-farmacia).
 Caso o CNPJ informado não seja cadastrado, será retornado um erro. Caso a farmácia não possua estoque, o retorno será uma lista vazia.
 
 ###### 8. POST ESTOQUE
@@ -116,3 +116,35 @@ No corpo da requisição, envie no seguinte formato:
 }
 ```
 Você pode substituir os dados para cadastrar um novo estoque. Todos os campos são obrigatórios.
+
+###### 9. DELETE ESTOQUE
+`http://localhost:8080/estoque`
+
+Para remover um medicamento do estoque, você deverá fazer uma requisição no seguinte formato:
+```sh
+{
+	"cnpj": 90561736000121,
+	"nroRegistro": 2233,
+	"quantidade": 3
+}
+```
+Informe o CNPJ da farmácia, o número de registro do medicamento e a quantidade de medicamentos a serem removidos. Caso um dos campos for retirado, será retornado um erro.
+
+###### 10. PUT ESTOQUE
+`http://localhost:8080/estoque`
+
+Com esta requisição, será possível fazer trocas de medicamentos entre as farmácias, para equilibrar o estoque. A requisição deverá ser enviada no seguinte formato:
+```sh
+{
+	"cnpjOrigem": 90561736000121,
+	"cnpjDestino": 43178995000198,
+	"nroRegistro": 1010,
+	"quantidade": 2
+}
+```
+Informe o CNPJ da farmácia de origem do medicamento, depois o CNPJ da farmácia de destino do medicamento, informe também o número de registro do medicamento que você quer enviar e a quantidade. Caso um dos campos for retirado, será retornado um erro.
+
+###### 11. GET HEALTH CHECK
+`http://localhost:8080/health`
+
+Esta requisição é apenas um teste para saber se o programa está funcionando :)
