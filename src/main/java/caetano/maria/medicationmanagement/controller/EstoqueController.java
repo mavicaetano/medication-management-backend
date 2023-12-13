@@ -40,7 +40,7 @@ public class EstoqueController {
         return ResponseEntity.status(HttpStatus.OK).body(estoqueService.addMedicamentoNoEstoque(estoqueAddMedicamentoDto));
     }
 
-    @DeleteMapping("/{cnpj}")
+    @DeleteMapping
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Object> removeMedicamentoNoEstoque(@RequestBody @Valid EstoqueAddMedicamentoDto estoqueAddMedicamentoDto) {
         return ResponseEntity.status(HttpStatus.OK).body(estoqueService.removeMedicamentoNoEstoque(estoqueAddMedicamentoDto));
