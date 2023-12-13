@@ -32,7 +32,7 @@ No Postman, você encontrará as seguintes requisições:
 ###### 1. POST INICIALIZAÇÃO
 `http://localhost:8080/inicializacao`
 
-Este método POST inicializará os dados das farmácias, medicamentos e estoque no sistema.
+Esta deve ser a primeira requisição a ser enviada. Este método POST inicializará os dados das farmácias, medicamentos e estoque no sistema.
 
 ###### 2. GET ALL MEDICAMENTOS
 `http://localhost:8080/medicamentos`
