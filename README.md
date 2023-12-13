@@ -31,26 +31,32 @@ No Postman, você encontrará as seguintes requisições:
 
 ###### 1. POST INICIALIZAÇÃO
 `http://localhost:8080/inicializacao`
+
 Este método POST inicializará os dados das farmácias, medicamentos e estoque no sistema.
 
 ###### 2. GET ALL MEDICAMENTOS
 `http://localhost:8080/medicamentos`
+
 Enviando esta requisição, será possível visualizar todos os medicamentos disponíveis nas farmácias cadastradas (com os dados da inicialização).
 
 ###### 3. GET ONE MEDICAMENTO
 `http://localhost:8080/medicamentos/8880`
+
 Aqui, você deverá colocar, além do endpoint padrão (/medicamentos), o número de registro do medicamento que você quer buscar (/medicamentos/número-de-registro). Os medicamentos cadastrados e seus respectivos números de registro estão disponíveis na tabela "MEDICAMENTO". Caso o número de registro não exista, será retornado um erro.
 
 ###### 3. GET ALL FARMÁCIAS
 `http://localhost:8080/farmacias`
+
 Enviando esta requisição, será possível visualizar todas as farmácias cadastradas.
 
 ###### 4. GET ONE FARMÁCIA
 `http://localhost:8080/farmacias/43178995000198`
+
 Nesta requisição, você deverá colocar o CNPJ da farmácia após o endpoint padrão (/farmacias/cnpj-da-farmacia). Caso não haja uma farmácia com o CNPJ utilizado, será retornado um erro.
 
 ###### 5. POST MEDICAMENTO
 `http://localhost:8080/medicamentos`
+
 Neste método POST, na aba "Body", selecione "raw". Devem ser enviadas as informações, em JSON, no seguinte formato:
 ```sh
 {
@@ -67,6 +73,7 @@ Você pode substituir os dados da requisição para incluir outras medicações.
 
 ###### 6. POST FARMÁCIA
 `http://localhost:8080/farmacias`
+
 Na aba "Body" (mantenha as configurações anteriores), envie a requisição no seguinte formato:
 ```sh
 {
@@ -93,11 +100,13 @@ Os dados da farmácia e do endereço podem ser substituídos. Todos os campos, e
 
 ###### 7. GET ESTOQUE
 `http://localhost:8080/estoque/43178995000198`
+
 Após o endpoint padrão (/estoque), coloque o CNPJ da farmácia cujo estoque você quer consultar (/estoque/cnpj-da-farmacia).
 Caso o CNPJ informado não seja cadastrado, será retornado um erro. Caso a farmácia não possua estoque, o retorno será uma lista vazia.
 
 ###### 8. POST ESTOQUE
 `http://localhost:8080/estoque`
+
 No corpo da requisição, envie no seguinte formato:
 ```sh
 {
