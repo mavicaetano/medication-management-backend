@@ -15,6 +15,8 @@ Este projeto é uma API que visa centralizar o gerenciamento de medicamentos e f
 - [PostgreSQL Server 15](https://www.postgresql.org)
 - [Maven 3.9.5](https://maven.apache.org)
 
+Para mais detalhes sobre as dependências do projeto, veja o arquivo [pom.xml](https://github.com/mavicaetano/medication-management-backend/blob/main/pom.xml)
+
 ### Instalação e execução
 
 - Abra o projeto no IntelliJ;
@@ -23,16 +25,14 @@ Este projeto é uma API que visa centralizar o gerenciamento de medicamentos e f
 - Baixe e execute o [Postman](https://www.postman.com);
 - Importe o [Postman Collection](https://github.com/mavicaetano/medication-management-backend/blob/feature/readme/src/main/resources/medication-management-backend.postman_collection.json) do projeto;
 
-#### Utilizando os serviços da API
+### Utilizando os serviços da API
 
 No Postman, você encontrará as seguintes requisições:
-
-![Status HTTP](https://www.flickr.com/photos/198458787@N05/53393476201/in/dateposted-public/)
 
 ###### 1. POST INICIALIZAÇÃO
 `http://localhost:8080/inicializacao`
 
-Esta deve ser a primeira requisição a ser enviada. Este método POST inicializará os dados das farmácias, medicamentos e estoque no sistema.
+Esta deve ser a primeira requisição a ser enviada. Esta requisição do tipo POST inicializará os dados das farmácias, medicamentos e estoque no sistema.
 
 ###### 2. GET ALL MEDICAMENTOS
 `http://localhost:8080/medicamentos`
@@ -57,7 +57,7 @@ Nesta requisição, você deverá colocar o CNPJ da farmácia após o endpoint p
 ###### 5. POST MEDICAMENTO
 `http://localhost:8080/medicamentos`
 
-Neste método POST, na aba "Body", selecione "raw". Devem ser enviadas as informações, em JSON, no seguinte formato:
+Nesta requisição do tipo POST, na aba "Body", selecione "raw". Devem ser enviadas as informações, em JSON, no seguinte formato:
 ```sh
 {
    "nroRegistro": 1101,
